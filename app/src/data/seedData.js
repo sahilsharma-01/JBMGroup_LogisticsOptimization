@@ -1140,7 +1140,6 @@ export function generateOptimizationResult(selectedOrders, vehicleType, activeSc
     const bH = dim.heightMm / 1000;
 
     const isFragileSkin = part?.category?.includes('Skin Panel');
-    const isHeavyBIW = part?.weight > 20;
 
     for (let b = 0; b < binsCount; b++) {
       if (isOptimal) {

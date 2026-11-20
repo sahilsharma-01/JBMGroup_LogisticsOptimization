@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { pendingOrders, fleet, customers, getCustomer, getPart, getVehicle, getVehicleType } from '../data/seedData'
 
 const dispatchQueueInitial = [
   {

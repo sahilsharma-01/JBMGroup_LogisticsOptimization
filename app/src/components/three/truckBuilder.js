@@ -471,7 +471,7 @@ function buildBody({ L, W, H, showTarp, operator, sideOpacity = 1 }) {
   const ladderZ = W / 2 - 0.35
   ;[-1, 1].forEach(s => {
     const rail = box(0.04, H * 0.8, 0.04, MAT.steel)
-    rail.position.set(L / 2 + 0.12, H * 0.4, ladderZ * s * 0 + (s * 0.14) + ladderZ)
+    rail.position.set(L / 2 + 0.12, H * 0.4, (s * 0.14) + ladderZ)
     g.add(rail)
   })
   for (let i = 0; i < 5; i += 1) {

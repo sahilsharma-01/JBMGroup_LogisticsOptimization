@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import {
-  pendingOrders, customers, fleet, dispatchLog, containerInventory, dockSlots,
+  pendingOrders, fleet, dispatchLog, containerInventory, dockSlots,
   getCustomer, getPart, getPriorityColor, getStatusLabel
 } from '../data/seedData'
 

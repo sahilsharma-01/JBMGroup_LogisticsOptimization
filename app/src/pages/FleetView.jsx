@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { fleet, vehicleTypes, getVehicleType, containerInventory } from '../data/seedData'
+import { fleet, vehicleTypes, getVehicleType } from '../data/seedData'
 
 export default function FleetView() {
   const [filterType, setFilterType] = useState('all')
