@@ -4,8 +4,9 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR/app"
 
+# Prefer latest installed Node version from NVM (e.g. Node 20+)
 if [ -d "$HOME/.nvm/versions/node" ]; then
-  NODE_BIN="$(find "$HOME/.nvm/versions/node" -maxdepth 2 -type d -name bin 2>/dev/null | head -n 1)"
+  NODE_BIN="$(find "$HOME/.nvm/versions/node" -maxdepth 2 -type d -name bin 2>/dev/null | sort -V -r | head -n 1)"
   [ -n "$NODE_BIN" ] && export PATH="$NODE_BIN:$PATH"
 fi
 
