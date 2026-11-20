@@ -104,29 +104,51 @@ JBMGroup_LogisticsOptimization/
 
 ### Installation & Run
 
-1. Navigate to the frontend directory:
+1. Navigate to the project directory:
    ```bash
-   cd app
+   cd /home/ubuntu/JBMGroup_LogisticsOptimization
    ```
 
 2. Install dependencies:
    ```bash
-   npm install
+   cd app && npm install && cd ..
    ```
 
-3. Launch development server:
+3. Launch development server directly:
    ```bash
-   npm run dev
+   ./start_app.sh
+   # or from app directory:
+   cd app && npm run dev
    ```
 
-4. Build for production:
+4. Run as background daemon in GNU Screen (production / server):
+   ```bash
+   screen -dmS logistics_optimization /home/ubuntu/JBMGroup_LogisticsOptimization/start_app.sh
+   # Check active screens
+   screen -ls
+   # Attach to console
+   screen -r logistics_optimization
+   ```
+
+5. Run test suite:
+   ```bash
+   npm test
+   # or from app directory:
+   cd app && npm test
+   ```
+
+6. Build for production:
    ```bash
    npm run build
+   # or from app directory:
+   cd app && npm run build
    ```
 
-5. Run linter:
+7. Run linter:
    ```bash
    npm run lint
+   # or from app directory:
+   cd app && npm run lint
    ```
 
 ---

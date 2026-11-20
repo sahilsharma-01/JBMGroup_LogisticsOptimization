@@ -1,0 +1,13 @@
+{
+  "name": "jbmgroup-logistics-optimization",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JBM LoadIQ: 3D Volumetric Load Optimization, Axle Load Physics & Outbound Logistics",
+  "scripts": {
+    "dev": "npm --prefix app run dev",
+    "build": "npm --prefix app run build",
+    "lint": "npm --prefix app run lint",
+    "test": "npm --prefix app run test",
+    "start": "./start_app.sh"
+  }
+}
