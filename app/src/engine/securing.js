@@ -61,7 +61,7 @@ export function buildSecuringPlan(vehicle, placements, { gapToleranceMm = 80 } =
   const items = placements.map(p => {
     const m = p.grossKg;
     const W = m * GRAVITY;
-    const mu = p.wheeled ? 0 : p.mu;
+    const mu = p.wheeled ? 0 : (p.mu ?? 0.3);
     // a unit resting on another unit slides on packaging, not on the deck
     const effectiveMu = p.tier > 1 ? Math.min(mu, 0.25) : mu;
 
